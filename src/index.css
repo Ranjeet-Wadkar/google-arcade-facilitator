@@ -22,14 +22,6 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -65,4 +57,70 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+body {
+  /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+  background: url("/background-tree.jpg") no-repeat center center fixed;
+  background-size: cover; /* makes it fill the screen */
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass card container */
+.glass-card {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+  padding: 0rem 1rem 1rem 2rem;
+  /* top = 1rem, right = 2rem, bottom = 2rem, left = 2rem */
+  width: 100%;
+  max-width: 80rem;
+}
+
+/* Glass table */
+.glass-table {
+  border-collapse: collapse;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.glass-table th {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0);
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.glass-table td {
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.glass-table tr {
+  transition: background 0.3s ease;
+  background: rgba(255, 255, 255, 0); /* frosted hover */
+  backdrop-filter: blur(8px);
+  border-radius: 12px; /* 🔹 this makes it rounded */
+  /* border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25); */
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9); */
+}
+
+.glass-table tr:hover {
+  /* background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9); */
+  background: rgba(255, 255, 255, 0.15); /* frosted hover */
+  backdrop-filter: blur(8px);
+  border-radius: 12px; /* 🔹 this makes it rounded */
 }
